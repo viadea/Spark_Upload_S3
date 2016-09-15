@@ -45,7 +45,7 @@ public class UploadS3 {
         try {
             System.out.println("Uploading a new object to S3 from a file\n");
             File file = new File(uploadFileName);
-            PutObjectRequest putRequest = new PutObjectRequest(bucketName, keyName, uploadFileName);
+            PutObjectRequest putRequest = new PutObjectRequest(bucketName, keyName, file);
  
             // Request server-side encryption.
             ObjectMetadata objectMetadata = new ObjectMetadata();
